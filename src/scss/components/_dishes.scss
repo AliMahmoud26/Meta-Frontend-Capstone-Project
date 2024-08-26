@@ -62,7 +62,7 @@
                 cursor: pointer;
 
                 @include breakpoint-down(medium) {
-                    // width: 250px;
+                    width: 250px;
                 }
 
                 &:hover {
@@ -75,7 +75,7 @@
                     border-top-left-radius: .5rem;
 
                     @include breakpoint-down(medium) {
-                        // width: 250px;
+                        width: 250px;
                     }
                 }
 
