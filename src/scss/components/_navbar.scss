@@ -15,7 +15,7 @@ nav {
         }
 
         @include breakpoint-down(small) {
-            padding: 1rem;
+            padding: .5rem 1rem;
         }
 
         .desktop-nav-menu {
