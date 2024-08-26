@@ -6,11 +6,11 @@ import LemonDessert from '../assets/desert.jpg'
 const Dishes = () => {
   return (
     <section className='dishes'>
-        <div className="container">
             <div className="dishes-header">
                 <h1>This weeks specials!</h1>
                 <button className='btn'>Online Menu</button>
             </div>
+        <div className="container">
             <div className="our-dishes">
                 <div className="dish">
                     <img style={{height: '230px'}} src={GreelSalad} alt="dish 1" />

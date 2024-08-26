@@ -5,20 +5,16 @@
 // Styling hero component
 .hero {
     background-color: $gray;
-    padding: 3rem 0;
-
-    .container {
-        @include flex-between;
-        position: relative;
+    padding: 4rem 12rem;
+    @include flex-between;
+    position: relative;
         
         @include breakpoint-down(medium) {
-            display: inline;
+            padding: 4rem 3rem;
         }
         
         .hero-text {
             @include breakpoint-down(medium) {
-                width: 100%;
-                margin-left: 2rem;
             }
 
             h1 {
@@ -54,8 +50,8 @@
             width: 350px;
             height: 350px;
             position: absolute;
-            right: 11rem;
-            top: 2.5rem;
+            right: 12rem;
+            top: 5rem;
 
             @include breakpoint-down(medium) {
                 display: none;
@@ -67,5 +63,4 @@
                 border-radius: 1rem;
             }
         }
-    }
 }

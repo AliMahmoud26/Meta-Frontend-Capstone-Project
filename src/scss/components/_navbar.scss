@@ -61,6 +61,7 @@ nav {
                 gap: 1.5rem;
                 transition: $transition;
                 z-index: 999;
+                // display: none;
 
                 @include breakpoint-down(small) {
                     width: 70%;

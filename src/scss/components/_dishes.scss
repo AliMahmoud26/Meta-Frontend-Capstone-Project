@@ -5,36 +5,52 @@
 // Styling dishes component
 .dishes {
     padding: 8rem 0;
-    .container {
-        .dishes-header {
-            @include flex-between;
 
-            h1 {
-                font-size: 2rem;
+    @include breakpoint-down(medium) {
+        margin: -4rem 2rem;
+    }
 
-                @include breakpoint-down(medium) {
-                    font-size: 1.5rem;
-                }
+    .dishes-header {
+        @include flex-between;
+        padding: 1rem 11rem 0;
 
-                @include breakpoint-down(small) {
-                    font-size: 1rem;
-                }
+        @include breakpoint-down(medium) {
+            padding: 0;
+        }
+
+        h1 {
+            font-size: 2rem;
+
+            @include breakpoint-down(medium) {
+                font-size: 1.5rem;
             }
 
-            .btn {
-                &:hover {
-                    color: $dark;
-                }
+            @include breakpoint-down(small) {
+                font-size: 1.125rem;
             }
         }
 
+        .btn {
+            &:hover {
+                color: $dark;
+            }
+
+            @include breakpoint-down(medium) {
+                font-size: .875rem;
+            }
+        }
+    }
+
+    .container {
         .our-dishes {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 2.75rem;
             margin-top: 4rem;
-
+            
             @include breakpoint-down(medium) {
+                @include flex-center;
+                flex-direction: column;
                 margin: 4rem auto;
             }
 
@@ -46,6 +62,10 @@
                 transition: $transition;
                 cursor: pointer;
 
+                @include breakpoint-down(medium) {
+                    // width: 250px;
+                }
+
                 &:hover {
                     transform: scale(1.09);
                 }
@@ -54,6 +74,10 @@
                     width: 350px;
                     border-top-right-radius: .5rem;
                     border-top-left-radius: .5rem;
+
+                    @include breakpoint-down(medium) {
+                        // width: 250px;
+                    }
                 }
 
                 .content {
