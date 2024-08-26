@@ -50,9 +50,9 @@ nav {
             ul {
                 position: absolute;
                 top: -100%;
-                right: 0;
-                height: 100vh;
-                width: 50%;
+                right: 1rem;
+                height: 70vh;
+                width: 90%;
                 background-color: $lightGreen;
                 box-shadow: $box-shadow;
                 padding: 2rem 4rem;
@@ -61,19 +61,21 @@ nav {
                 gap: 1.5rem;
                 transition: $transition;
                 z-index: 999;
+                border-radius: 1rem;
                 // display: none;
 
                 @include breakpoint-down(small) {
-                    width: 70%;
+                    width: 90%;
+                    gap: 1rem;
                 }
 
                 &.showNavbar {
-                    top: 0;
+                    top: 4rem;
                 }
 
                 .times-icon {
                     align-self: flex-end;
-                    margin-bottom: 1rem;
+                    margin-bottom: .5rem;
                     font-size: 1.5rem;
                 }
 
@@ -85,7 +87,7 @@ nav {
                     cursor: pointer;
 
                     @include breakpoint-down(small) {
-                        font-size: 1.125rem;
+                        font-size: 1rem;
                     }
 
                     &:hover {
