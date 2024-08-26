@@ -11,7 +11,6 @@ const Dishes = () => {
                 <button className='btn'>Online Menu</button>
             </div>
         <div className="container">
-            <div className="our-dishes">
                 <div className="dish">
                     <img style={{height: '230px'}} src={GreelSalad} alt="dish 1" />
                     <div className="content">
@@ -45,7 +44,6 @@ const Dishes = () => {
                         <button className='btn'>Order Now</button>
                     </div>
                 </div>
-            </div>
         </div>
     </section>
   )
