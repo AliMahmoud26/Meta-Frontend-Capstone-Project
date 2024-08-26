@@ -16,9 +16,7 @@
         }
         
         .hero-text {
-            
             @include breakpoint-down(medium) {
-                // flex: 1;
                 width: 100%;
                 margin-left: 2rem;
             }
@@ -49,28 +47,6 @@
                 @include breakpoint-down(medium) {
                     margin: 1rem 0 1.5rem;
                     font-size: .875rem;
-                }
-            }
-
-            .btn {
-                color: $dark;
-                background-color: $yellow;
-                padding: .5rem 1rem;
-                border: 2px solid $yellow;
-                outline: none;
-                box-shadow: $box-shadow;
-                border-radius: .25rem;
-                font-size: 1.125rem;
-                cursor: pointer;
-                transition: $transition;
-
-                &:hover {
-                    background-color: transparent;
-                    color: $white;
-                }
-
-                @include breakpoint-down(medium) {
-                    font-size: 1rem;
                 }
             }
         }

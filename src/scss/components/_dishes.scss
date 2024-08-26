@@ -1,0 +1,73 @@
+// Importing partials files
+@use '../partials/variables' as *;
+@use '../partials/mixins' as *;
+
+// Styling dishes component
+.dishes {
+    padding: 8rem 0;
+    .container {
+        .dishes-header {
+            @include flex-between;
+
+            h1 {
+                font-size: 2rem;
+
+                @include breakpoint-down(medium) {
+                    font-size: 1.5rem;
+                }
+
+                @include breakpoint-down(small) {
+                    font-size: 1rem;
+                }
+            }
+
+            .btn {
+                &:hover {
+                    color: $dark;
+                }
+            }
+        }
+
+        .our-dishes {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2.75rem;
+            margin-top: 4rem;
+
+            @include breakpoint-down(medium) {
+                margin: 4rem auto;
+            }
+
+            .dish {
+                width: 350px;
+                background-color: $lightGreen;
+                box-shadow: $box-shadow;
+                border-radius: .5rem;
+                transition: $transition;
+                cursor: pointer;
+
+                &:hover {
+                    transform: scale(1.09);
+                }
+
+                img {
+                    width: 350px;
+                    border-top-right-radius: .5rem;
+                    border-top-left-radius: .5rem;
+                }
+
+                .content {
+                    padding: 1rem;
+
+                    .dish-header {
+                        @include flex-between;
+                    }
+
+                    p {
+                        margin: 1.5rem 0;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,5 +1,6 @@
 // Importing other partials files
 @use './variables' as *;
+@use './mixins' as *;
 
 // Global styling
 body {
@@ -15,7 +16,6 @@ code {
 font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-  
 
 * {
     padding: 0;
@@ -34,4 +34,29 @@ li {
 
 .container {
     padding: 1rem 12rem;
+}
+
+.btn {
+    color: $dark;
+    background-color: $yellow;
+    padding: .6rem 1.25rem;
+    border: 2px solid $yellow;
+    outline: none;
+    box-shadow: $box-shadow;
+    border-radius: .5rem;
+    font: {
+        size: 1.125rem;
+        weight: 600;
+    }
+    cursor: pointer;
+    transition: $transition;
+
+    &:hover {
+        background-color: transparent;
+        color: $white;
+    }
+
+    @include breakpoint-down(medium) {
+        font-size: 1rem;
+    }
 }
