@@ -14,6 +14,10 @@ nav {
             padding: 1rem 3rem;
         }
 
+        @include breakpoint-down(small) {
+            padding: 1rem;
+        }
+
         .desktop-nav-menu {
             @include flex-center;
             gap: 2rem;
