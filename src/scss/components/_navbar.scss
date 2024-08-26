@@ -49,7 +49,7 @@ nav {
 
             ul {
                 position: absolute;
-                top: 0;
+                top: -100%;
                 right: 0;
                 height: 100vh;
                 width: 50%;
@@ -61,14 +61,14 @@ nav {
                 gap: 1.5rem;
                 transition: $transition;
                 z-index: 999;
-                display: none;
+                // display: none;
 
                 @include breakpoint-down(small) {
                     width: 70%;
                 }
 
                 &.showNavbar {
-                    display: flex;
+                    top: 0;
                 }
 
                 .times-icon {

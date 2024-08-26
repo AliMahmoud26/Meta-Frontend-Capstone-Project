@@ -45,13 +45,14 @@
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 2.75rem;
-            margin-top: 4rem;
+            margin: 4rem auto 0;
             
             @include breakpoint-down(medium) {
                 @include flex-center;
                 flex-direction: column;
+                margin: 2rem auto;
             }
-
+            
             .dish {
                 width: 350px;
                 background-color: $lightGreen;
@@ -59,10 +60,9 @@
                 border-radius: .5rem;
                 transition: $transition;
                 cursor: pointer;
-                
+
                 @include breakpoint-down(medium) {
-                    width: 250px;
-                    margin: 4rem auto;
+                   width: 300px;
                 }
 
                 &:hover {
@@ -75,8 +75,8 @@
                     border-top-left-radius: .5rem;
 
                     @include breakpoint-down(medium) {
-                        width: 250px;
-                    }
+                        width: 300px;
+                     }
                 }
 
                 .content {
