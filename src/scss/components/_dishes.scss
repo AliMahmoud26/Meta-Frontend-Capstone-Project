@@ -59,10 +59,10 @@
                 border-radius: .5rem;
                 transition: $transition;
                 cursor: pointer;
-                margin: 4rem auto;
-
+                
                 @include breakpoint-down(medium) {
                     width: 250px;
+                    margin: 4rem auto;
                 }
 
                 &:hover {
