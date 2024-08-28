@@ -10,7 +10,7 @@
     position: relative;
         
         @include breakpoint-down(medium) {
-            padding: 4rem 3rem;
+            padding: 4rem 1.5rem;
         }
         
         .hero-text {
