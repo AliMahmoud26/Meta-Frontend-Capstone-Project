@@ -1,0 +1,55 @@
+// Importing partials files
+@use '../partials/variables' as *;
+@use '../partials/mixins' as *;
+
+// Styling footer component
+footer {
+    padding: 4rem;
+    background-color: $lightGreen;
+    box-shadow: $box-shadow;
+
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 6rem;
+
+        .footer-desc {
+            img {
+                width: 12.5rem;
+                margin-bottom: .5rem;
+            }
+
+            p {
+                line-height: 1.6;
+            }
+        }
+
+        .important-links {
+            ul {
+                li {
+                    margin-top: .5rem;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .contact {
+            .details {
+                .detail {
+                    margin-top: .5rem;
+                }
+            }
+        }
+        
+        .socials {
+            .social-links {
+                @include flex-column;
+
+                span {
+                    margin-top: .75rem;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

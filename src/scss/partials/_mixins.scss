@@ -13,6 +13,12 @@
     justify-content: space-between;
 }
 
+@mixin flex-column {
+  display: flex;
+  // align-items: center;
+  flex-direction: column;
+}
+
 // Responsive Screens
 // 640px, 1024px, 1400px
 $breakpoints-up: ("medium": "40em", "large": "64em", "xlarge": "87.5em");
