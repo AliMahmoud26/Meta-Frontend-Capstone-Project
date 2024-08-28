@@ -13,6 +13,10 @@ footer {
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
         gap: 6rem;
 
+        @include breakpoint-down(small) {
+            gap: 2rem;
+        }
+
         .footer-desc {
             img {
                 width: 12.5rem;
