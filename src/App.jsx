@@ -5,6 +5,7 @@ import Dishes from "./components/Dishes";
 import Footer from "./components/Footer";
 import Login from "./Pages/Login";
 import Reservation from "./Pages/Reservation";
+import Register from "./Pages/Register";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         } />
         <Route path="/login" element={<Login />} />
         <Route path="/reservation" element={<Reservation />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
     </Router>
   );

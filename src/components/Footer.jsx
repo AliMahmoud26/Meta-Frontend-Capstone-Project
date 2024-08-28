@@ -1,5 +1,6 @@
 import React from 'react'
 import FooterLogo from '../assets/Logo.svg'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
@@ -12,12 +13,13 @@ const Footer = () => {
         <div className="link important-links">
           <h2 className="header">Important Links</h2>
           <ul>
-            <li>Home</li>
+            <li><Link to="/">Home</Link></li>
             <li>About</li>
+            <li>Services</li>
             <li>Menu</li>
-            <li>Reservation</li>
+            <li><Link to="/reservation">Reservation</Link></li>
             <li>Order Online</li>
-            <li>Login</li>
+            <li><Link to="/login">Login</Link></li>
           </ul>
         </div>
         <div className="link contact">
