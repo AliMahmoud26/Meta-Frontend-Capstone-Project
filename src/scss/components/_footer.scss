@@ -17,10 +17,16 @@ footer {
             gap: 2rem;
         }
 
+        .link {
+            .header {
+                margin-bottom: 1.25rem;
+            }
+        }
+
         .footer-desc {
             img {
                 width: 12.5rem;
-                margin-bottom: .5rem;
+                margin-bottom: 1rem;
             }
 
             p {
@@ -31,7 +37,7 @@ footer {
         .important-links {
             ul {
                 li {
-                    margin-top: .5rem;
+                    margin-top: 1rem;
                     cursor: pointer;
                 }
             }
@@ -40,17 +46,17 @@ footer {
         .contact {
             .details {
                 .detail {
-                    margin-top: .5rem;
+                    margin-top: 1rem;
                 }
             }
         }
-        
+
         .socials {
             .social-links {
                 @include flex-column;
 
                 span {
-                    margin-top: .75rem;
+                    margin-top: 1rem;
                     cursor: pointer;
                 }
             }
