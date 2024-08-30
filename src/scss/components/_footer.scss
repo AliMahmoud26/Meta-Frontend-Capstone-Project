@@ -39,6 +39,11 @@ footer {
                 li {
                     margin-top: 1rem;
                     cursor: pointer;
+                    transition: $transition;
+
+                    &:hover {
+                        color: $yellow;
+                    }
                 }
             }
         }
@@ -58,6 +63,11 @@ footer {
                 span {
                     margin-top: 1rem;
                     cursor: pointer;
+                    transition: $transition;
+
+                    &:hover {
+                        color: $yellow;
+                    }
                 }
             }
         }
