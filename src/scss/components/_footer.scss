@@ -67,6 +67,10 @@ footer {
         text-align: center;
         margin-top: 2rem;
 
+        @include breakpoint-down(small) {
+            font-size: .875rem;
+        }
+
         > a {
             color: $purple;
         }
