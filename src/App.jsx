@@ -1,27 +1,30 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
+import { useState } from 'react';
 import Dishes from "./components/Dishes";
 import Footer from "./components/Footer";
+import Hero from "./components/Hero";
+import Navbar from "./components/Navbar";
 import Login from "./Pages/Login";
-import Reservation from "./Pages/Reservation";
 import Register from "./Pages/Register";
+import Reservation from "./Pages/Reservation";
 
 function App() {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
   return (
     <Router>
-      <Navbar />
+      <Navbar isAuthenticated={isAuthenticated} setIsAuthenticated={setIsAuthenticated} />
       <Routes>
-      <Route path="/" element={
+        <Route path="/" element={
           <>
             <Hero />
             <Dishes />
             <Footer />
           </>
         } />
-        <Route path="/login" element={<Login />} />
+        <Route path="/login" element={<Login setIsAuthenticated={setIsAuthenticated} />} />
+        <Route path="/register" element={<Register setIsAuthenticated={setIsAuthenticated} />} />
         <Route path="/reservation" element={<Reservation />} />
-        <Route path="/register" element={<Register />} />
       </Routes>
     </Router>
   );
