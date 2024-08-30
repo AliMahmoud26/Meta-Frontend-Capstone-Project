@@ -48,6 +48,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <p className='right'>Copyright &copy; <a href="https://github.com/AliMahmoud26" target='_blank'>Ali Mahmoud</a> 2024, All Rights Reserved</p>
     </footer>
   )
 }

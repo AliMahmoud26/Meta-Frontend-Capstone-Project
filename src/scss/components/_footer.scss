@@ -4,7 +4,7 @@
 
 // Styling footer component
 footer {
-    padding: 4rem;
+    padding: 4rem 4rem 1rem;
     background-color: $lightGreen;
     box-shadow: $box-shadow;
 
@@ -60,6 +60,15 @@ footer {
                     cursor: pointer;
                 }
             }
+        }
+    }
+
+    > p {
+        text-align: center;
+        margin-top: 2rem;
+
+        > a {
+            color: $purple;
         }
     }
 }
