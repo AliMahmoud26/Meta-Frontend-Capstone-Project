@@ -1,0 +1,67 @@
+// Importing partials files
+@use '../partials/variables' as *;
+@use '../partials/mixins' as *;
+
+// Styling testimonials component
+.testimonials {
+    padding: 4rem 12rem;
+    margin-top: -3rem;
+    // background-color: $lightGreen;
+
+    @include breakpoint-down(medium) {
+        padding: 0 2rem;
+    }
+
+    h1 {
+        text-align: center;
+        color: $dark;
+        margin-bottom: 3rem;
+        font-size: 3rem;
+
+        @include breakpoint-down(medium) {
+            font-size: 2rem;
+        }
+    }
+
+
+    .reviews-holder {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 2rem;
+        
+        @include breakpoint-down(small) {
+            margin: 0 auto;
+        }
+        
+        .review {
+            background-color: $lightGreen;
+            padding: 1.5rem 2rem;
+            box-shadow: $box-shadow;
+            border-radius: .5rem;
+
+
+            .content {
+                @include flex-center;
+
+                img {
+                    width: 60px;
+                    border-radius: 50%;
+                }
+
+                .text {
+                    margin-left: 1rem;
+
+                    span {
+                        margin-top: .5rem;
+                        color: $yellow;
+                    }
+                }
+            }
+
+            p {
+                margin-top: .5rem;
+                line-height: 1.6;
+            }
+        }
+    }
+}

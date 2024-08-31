@@ -7,6 +7,8 @@ import Navbar from "./components/Navbar";
 import Login from "./Pages/Login";
 import Register from "./Pages/Register";
 import Reservation from "./Pages/Reservation";
+import Testimonials from './components/Testimonials';
+import About from './components/About';
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -19,6 +21,8 @@ function App() {
           <>
             <Hero />
             <Dishes />
+            <Testimonials />
+            <About />
             <Footer />
           </>
         } />
