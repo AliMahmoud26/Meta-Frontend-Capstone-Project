@@ -1,0 +1,73 @@
+// Importing partials files
+@use '../partials/variables' as *;
+@use '../partials/mixins' as *;
+
+// Styling about component
+.about {
+    padding: 4rem;
+    margin: 6rem 12rem 15rem;
+
+    @include breakpoint-down(medium) {
+        padding: 2rem 1rem;
+        margin: 2rem 0;
+    }
+
+    .about-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        gap: 6rem;
+
+        .text {
+            h1 {
+                font-size: 2.5rem;
+
+                @include breakpoint-down(small) {
+                    font-size: 1.5rem;
+                }
+            }
+
+            span {
+                font-size: 1.5rem;
+
+                @include breakpoint-down(small) {
+                    font-size: .875rem;
+                }
+            }
+
+            p {
+                margin-top: 3rem;
+                line-height: 1.8;
+
+                @include breakpoint-down(small) {
+                    margin-top: 1.5rem;
+                }
+            }
+        }
+
+        .images {
+            width: 300px;
+            position: relative;
+
+            @include breakpoint-down(medium) {
+                display: none;
+            }
+
+            img {
+                width: 100%;
+                border-radius: .5rem;
+
+                &:first-of-type {
+                    position: absolute;
+                    top: 8rem;
+                    left: 0;
+                }
+
+                &:last-of-type {
+                    position: absolute;
+                    top: 0;
+                    left: 12rem;
+                }
+            }
+        }
+    }
+}

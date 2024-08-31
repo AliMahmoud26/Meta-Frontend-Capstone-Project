@@ -4,12 +4,13 @@
 
 // Styling testimonials component
 .testimonials {
-    padding: 4rem 12rem;
+    padding: 6rem 12rem 8rem;
     margin-top: -3rem;
+    background-color: $offWhite;
     // background-color: $lightGreen;
 
     @include breakpoint-down(medium) {
-        padding: 0 2rem;
+        padding: 4rem 2rem;
     }
 
     h1 {

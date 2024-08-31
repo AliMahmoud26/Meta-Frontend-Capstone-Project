@@ -14,7 +14,7 @@ const Testimonials = () => {
                 <div className="content">
                     <img src={Testimonial1} alt="review img" />
                     <div className="text">
-                        <h3>Name</h3>
+                        <h3>Username</h3>
                         <span><FaStar /><FaStar /><FaStar /><FaStar /><FaStar /></span>
                     </div>
                 </div>
@@ -24,7 +24,7 @@ const Testimonials = () => {
             <div className="content">
                     <img src={Testimonial2} alt="review img" />
                     <div className="text">
-                        <h3>Name</h3>
+                        <h3>Username</h3>
                         <span><FaStar /><FaStar /><FaStar /><FaStar /><FaStar /></span>
                     </div>
                 </div>
@@ -34,7 +34,7 @@ const Testimonials = () => {
                 <div className="content">
                     <img src={Testimonial3} alt="review img" />
                     <div className="text">
-                        <h3>Name</h3>
+                        <h3>Username</h3>
                         <span><FaStar /><FaStar /><FaStar /><FaStar /><FaStar /></span>
                     </div>
                 </div>
