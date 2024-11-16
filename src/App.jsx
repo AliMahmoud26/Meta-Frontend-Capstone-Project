@@ -9,6 +9,7 @@ import Register from "./Pages/Register";
 import Reservation from "./Pages/Reservation";
 import Testimonials from './components/Testimonials';
 import About from './components/About';
+import Bookings from './Pages/Bookings';
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -29,6 +30,7 @@ function App() {
         <Route path="/login" element={<Login setIsAuthenticated={setIsAuthenticated} />} />
         <Route path="/register" element={<Register setIsAuthenticated={setIsAuthenticated} />} />
         <Route path="/reservation" element={<Reservation />} />
+        <Route path="/bookings" element={<Bookings />} />
       </Routes>
     </Router>
   );

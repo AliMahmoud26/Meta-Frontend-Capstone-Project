@@ -34,11 +34,11 @@ const Navbar = ({ isAuthenticated, setIsAuthenticated }) => {
           <ul className={`${navbarVisible ? 'showNavbar' : ''}`}>
             <span className='times-icon' onClick={toggleNavbar}><FaTimes /></span>
             <li><Link to="/">Home</Link></li>
-            <li><Link to="/about">About</Link></li>
-            <li><Link to="/services">Services</Link></li>
-            <li><Link to="/menu">Menu</Link></li>
+            <li>About</li>
+            <li>Menu</li>
+            <li><Link to="/bookings">Bookings</Link></li>
             <li><Link to="/reservation">Reservation</Link></li>
-            <li><Link to="/order">Order Online</Link></li>
+            <li>Order Online</li>
             {isAuthenticated ? (
               <li onClick={handleLogout}>Logout</li>
             ) : (
@@ -48,16 +48,17 @@ const Navbar = ({ isAuthenticated, setIsAuthenticated }) => {
         </div>
 
         <ul className="desktop-nav-menu">
-          <li><Link to="/">Home</Link></li>
-          <li>About</li>
-          <li>Menu</li>
-          <li><Link to="/reservation">Reservation</Link></li>
-          <li>Order Online</li>
-          {isAuthenticated ? (
-            <li onClick={handleLogout}>Logout</li>
-          ) : (
-            <li><Link to="/login">Login</Link></li>
-          )}
+        <li><Link to="/">Home</Link></li>
+            <li>About</li>
+            <li>Menu</li>
+            <li><Link to="/bookings">Bookings</Link></li>
+            <li><Link to="/reservation">Reservation</Link></li>
+            <li>Order Online</li>
+            {isAuthenticated ? (
+              <li onClick={handleLogout}>Logout</li>
+            ) : (
+              <li><Link to="/login">Login</Link></li>
+            )}
         </ul>
       </div>
     </nav>
