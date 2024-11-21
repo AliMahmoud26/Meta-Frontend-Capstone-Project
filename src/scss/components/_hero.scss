@@ -4,7 +4,10 @@
 
 // Styling hero component
 .hero {
-    background-color: $gray;
+    // background-color: $gray;
+    background-image: url('../../../public/assets/hero1.jpg');
+    background-size: cover;
+    min-height: 50vh;
     padding: 4rem 12rem;
     @include flex-between;
     position: relative;
@@ -51,7 +54,7 @@
             height: 350px;
             position: absolute;
             right: 12rem;
-            top: 5rem;
+            top: 6rem;
 
             @include breakpoint-down(medium) {
                 display: none;

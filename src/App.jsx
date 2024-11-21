@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { useState } from 'react';
 import Dishes from "./components/Dishes";
 import Footer from "./components/Footer";
@@ -8,8 +8,16 @@ import Login from "./Pages/Login";
 import Register from "./Pages/Register";
 import Reservation from "./Pages/Reservation";
 import Testimonials from './components/Testimonials';
-import About from './components/About';
 import Bookings from './Pages/Bookings';
+import Menu from './Pages/Menu';
+import Orders from './Pages/Orders';
+import RestaurantHistory from './Pages/RestaurantHistory';
+import About from './components/About';
+
+// ProtectedRoute Component
+function ProtectedRoute({ isAuthenticated, children }) {
+  return isAuthenticated ? children : <Navigate to="/login" />;
+}
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -18,19 +26,69 @@ function App() {
     <Router>
       <Navbar isAuthenticated={isAuthenticated} setIsAuthenticated={setIsAuthenticated} />
       <Routes>
-        <Route path="/" element={
-          <>
-            <Hero />
-            <Dishes />
-            <Testimonials />
-            <About />
-            <Footer />
-          </>
-        } />
-        <Route path="/login" element={<Login setIsAuthenticated={setIsAuthenticated} />} />
-        <Route path="/register" element={<Register setIsAuthenticated={setIsAuthenticated} />} />
-        <Route path="/reservation" element={<Reservation />} />
-        <Route path="/bookings" element={<Bookings />} />
+        {/* Public Routes */}
+        <Route 
+          path="/" 
+          element={
+            <>
+              <Hero />
+              <Dishes />
+              <Testimonials />
+              <About />
+              <Footer />
+            </>
+          } 
+        />
+        <Route 
+          path="/login" 
+          element={<Login setIsAuthenticated={setIsAuthenticated} />} 
+        />
+        <Route 
+          path="/register" 
+          element={<Register setIsAuthenticated={setIsAuthenticated} />} 
+        />
+
+        {/* Protected Routes */}
+        <Route 
+          path="/reservation" 
+          element={
+            <ProtectedRoute isAuthenticated={isAuthenticated}>
+              <Reservation />
+            </ProtectedRoute>
+          } 
+        />
+        <Route 
+          path="/bookings" 
+          element={
+            <ProtectedRoute isAuthenticated={isAuthenticated}>
+              <Bookings />
+            </ProtectedRoute>
+          } 
+        />
+        <Route 
+          path="/restaurant-history" 
+          element={
+            <ProtectedRoute isAuthenticated={isAuthenticated}>
+              <RestaurantHistory />
+            </ProtectedRoute>
+          } 
+        />
+        <Route 
+          path="/menu" 
+          element={
+            <ProtectedRoute isAuthenticated={isAuthenticated}>
+              <Menu />
+            </ProtectedRoute>
+          } 
+        />
+        <Route 
+          path="/orders" 
+          element={
+            <ProtectedRoute isAuthenticated={isAuthenticated}>
+              <Orders />
+            </ProtectedRoute>
+          } 
+        />
       </Routes>
     </Router>
   );

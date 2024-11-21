@@ -2,13 +2,14 @@ import React from 'react'
 import GreelSalad from '../assets/greek salad.jpg'
 import Bruchetta from '../assets/bruchetta.svg'
 import LemonDessert from '../assets/desert.jpg'
+import { Link } from 'react-router-dom'
 
 const Dishes = () => {
   return (
     <section className='dishes'>
             <div className="dishes-header">
                 <h1>This weeks specials!</h1>
-                <button className='btn'>Online Menu</button>
+                <Link to='/menu'><button className='btn'>Online Menu</button></Link>
             </div>
         <div className="container">
                 <div className="dish">

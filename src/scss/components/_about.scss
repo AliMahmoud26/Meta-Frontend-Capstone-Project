@@ -41,6 +41,13 @@
                 @include breakpoint-down(small) {
                     margin-top: 1.5rem;
                 }
+
+                .history-link {
+                    transition: $transition;
+                    color: $purple;
+                    &:hover {
+                    }
+                }
             }
         }
 

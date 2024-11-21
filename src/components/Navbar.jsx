@@ -33,27 +33,27 @@ const Navbar = ({ isAuthenticated, setIsAuthenticated }) => {
           <span className="bars-icon" onClick={toggleNavbar}><FaBars /></span>
           <ul className={`${navbarVisible ? 'showNavbar' : ''}`}>
             <span className='times-icon' onClick={toggleNavbar}><FaTimes /></span>
-            <li><Link to="/">Home</Link></li>
-            <li>About</li>
-            <li>Menu</li>
-            <li><Link to="/bookings">Bookings</Link></li>
-            <li><Link to="/reservation">Reservation</Link></li>
-            <li>Order Online</li>
-            {isAuthenticated ? (
-              <li onClick={handleLogout}>Logout</li>
-            ) : (
-              <li><Link to="/login">Login</Link></li>
-            )}
+              <Link to='/'><li>Home</li></Link>
+              <Link to='/restaurant-history'><li>About</li></Link>
+              <Link to='/menu'><li>Menu</li></Link>
+              <Link to='/bookings'><li>Bookings</li></Link>
+              <Link to='/reservation'><li>Reservation</li></Link>
+              <Link to='/orders'><li>Orders</li></Link>
+              {isAuthenticated ? (
+                <li onClick={handleLogout}>Logout</li>
+              ) : (
+                <li><Link to="/login">Login</Link></li>
+              )}
           </ul>
         </div>
 
         <ul className="desktop-nav-menu">
-        <li><Link to="/">Home</Link></li>
-            <li>About</li>
-            <li>Menu</li>
-            <li><Link to="/bookings">Bookings</Link></li>
-            <li><Link to="/reservation">Reservation</Link></li>
-            <li>Order Online</li>
+            <Link to='/'><li>Home</li></Link>
+            <Link to='/restaurant-history'><li>About</li></Link>
+            <Link to='/menu'><li>Menu</li></Link>
+            <Link to='/bookings'><li>Bookings</li></Link>
+            <Link to='/reservation'><li>Reservation</li></Link>
+            <Link to='/orders'><li>Orders</li></Link>
             {isAuthenticated ? (
               <li onClick={handleLogout}>Logout</li>
             ) : (

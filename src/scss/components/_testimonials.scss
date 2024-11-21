@@ -39,6 +39,8 @@
             padding: 1.5rem 2rem;
             box-shadow: $box-shadow;
             border-radius: .5rem;
+            transition: $transition;
+            cursor: pointer;
 
 
             .content {
@@ -62,6 +64,10 @@
             p {
                 margin-top: .5rem;
                 line-height: 1.6;
+            }
+
+            &:hover {
+                transform: scale(1.1);
             }
         }
     }
