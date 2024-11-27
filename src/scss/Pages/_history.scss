@@ -1,0 +1,89 @@
+// Importing partials files
+@use '../partials/variables' as *;
+@use '../partials/mixins' as *;
+
+// Styling the about restaurant history page
+.history {
+    .our-story {
+        padding: 0 2rem 2rem;
+        text-align: center;
+
+        @include breakpoint-down(large) {
+            margin-top: 35rem;
+        }
+
+        @include breakpoint-down(medium) {
+            margin-top: 2rem;
+        }
+
+        h2 {
+            margin-bottom: 2rem;
+            color: $purple;
+            position: relative;
+            text-transform: uppercase;
+
+            @include breakpoint-down(large) {
+                margin-bottom: 1rem;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 2rem;
+                left: 41rem;
+                width: 6rem;
+                height: 2px;
+                border-radius: 50%;
+                background-color: $purple;
+
+                @include breakpoint-down(large) {
+                    display: none;
+                }
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 2.5rem;
+                left: 41rem;
+                width: 9rem;
+                height: 2px;
+                border-radius: 50%;
+                background-color: $purple;
+
+                @include breakpoint-down(large) {
+                    display: none;
+                }
+            }
+        }
+
+        p {
+            line-height: 1.6;
+            color: $dark;
+
+            @include breakpoint-down(small) {
+                text-align: left;
+            }
+        }
+    }
+
+    .gallery {
+        @include grid-col;
+        padding: 0 4rem;
+        margin-top: 2rem;
+
+        .image-col {
+            img {
+                filter: grayscale(60%);
+                transition: $transition;
+                border-radius: .25rem;
+
+                &:hover {
+                    filter: grayscale(0%);
+                    transform: skewX(-1deg) scale(1.05);
+                }
+            }
+        }
+
+    }
+}

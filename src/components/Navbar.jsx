@@ -34,7 +34,7 @@ const Navbar = ({ isAuthenticated, setIsAuthenticated }) => {
           <ul className={`${navbarVisible ? 'showNavbar' : ''}`}>
             <span className='times-icon' onClick={toggleNavbar}><FaTimes /></span>
               <Link to='/'><li>Home</li></Link>
-              <Link to='/restaurant-history'><li>About</li></Link>
+              <Link to='/history'><li>About</li></Link>
               <Link to='/menu'><li>Menu</li></Link>
               <Link to='/bookings'><li>Bookings</li></Link>
               <Link to='/reservation'><li>Reservation</li></Link>
@@ -49,7 +49,7 @@ const Navbar = ({ isAuthenticated, setIsAuthenticated }) => {
 
         <ul className="desktop-nav-menu">
             <Link to='/'><li>Home</li></Link>
-            <Link to='/restaurant-history'><li>About</li></Link>
+            <Link to='/history'><li>About</li></Link>
             <Link to='/menu'><li>Menu</li></Link>
             <Link to='/bookings'><li>Bookings</li></Link>
             <Link to='/reservation'><li>Reservation</li></Link>

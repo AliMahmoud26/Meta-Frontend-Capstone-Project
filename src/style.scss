@@ -10,6 +10,9 @@
 @use './scss/components/testimonials';
 @use './scss/components/about';
 @use './scss/components/footer';
+
+// Importing Pages Files
 @use './scss/Pages/login';
 @use './scss/Pages/register';
 @use './scss/Pages/reservation';
+@use './scss/Pages/history';

@@ -11,7 +11,7 @@ import Testimonials from './components/Testimonials';
 import Bookings from './Pages/Bookings';
 import Menu from './Pages/Menu';
 import Orders from './Pages/Orders';
-import RestaurantHistory from './Pages/RestaurantHistory';
+import History from './Pages/History';
 import About from './components/About';
 
 // ProtectedRoute Component
@@ -40,6 +40,10 @@ function App() {
           } 
         />
         <Route 
+          path="/about" 
+          element={<About />} 
+        />
+        <Route 
           path="/login" 
           element={<Login setIsAuthenticated={setIsAuthenticated} />} 
         />
@@ -66,10 +70,10 @@ function App() {
           } 
         />
         <Route 
-          path="/restaurant-history" 
+          path="/history" 
           element={
             <ProtectedRoute isAuthenticated={isAuthenticated}>
-              <RestaurantHistory />
+              <History />
             </ProtectedRoute>
           } 
         />
