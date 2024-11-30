@@ -3,13 +3,12 @@ import About from '../components/About'
 import gallery_first from '../assets/restauranfood.jpg'
 import gallery_last from '../assets/food1.avif'
 import gallery_1 from '../../public/assets/restaurant-1.jpg'
-import gallery_2 from '../../public/assets/restaurant-2.jpg'
 import gallery_3 from '../../public/assets/restaurant-3.jpg'
 import gallery_4 from '../../public/assets/restaurant-4.jpg'
-import gallery_6 from '../../public/assets/restaurant-6.jpg'
 import gallery_8 from '../../public/assets/restaurant-8.jpg'
 import gallery_9 from '../../public/assets/restaurant-9.jpg'
 import gallery_10 from '../../public/assets/restaurant-10.jpg'
+import gallery_16 from '../../public/assets/restaurant-16.jpg'
 import gallery_17 from '../../public/assets/restaurant-17.jpg'
 
 const History = () => {
@@ -30,20 +29,18 @@ const History = () => {
                 <img src={gallery_8} width={350} alt="Image_COL-1 First_image" />
             </div>
             <div className="image-col col_2">
-                <img src={gallery_1} width={350} alt="Image_COL-2 First_image" />
-                <img src={gallery_2} width={350} alt="Image_COL-2 First_image" />
-                <img src={gallery_3} width={350} alt="Image_COL-2 First_image" />
-                <img src={gallery_17} width={350} alt="Image_COL-2 First_image" />
+                <img src={gallery_1} width={379} alt="Image_COL-2 First_image" />
+                <img src={gallery_10} width={379} alt="Image_COL-2 First_image" />
+                <img src={gallery_3} width={379} alt="Image_COL-2 First_image" />
             </div>
             <div className="image-col col_3">
-                <img src={gallery_4} width={350} alt="Image_COL-3 First_image" />
-                <img src={gallery_17} width={350} alt="Image_COL-3 First_image" />
-                <img src={gallery_6} width={350} alt="Image_COL-3 First_image" />
-                <img src={gallery_10} width={350} alt="Image_COL-3 First_image" />
+                <img src={gallery_4} width={379} alt="Image_COL-3 First_image" />
+                <img src={gallery_17} width={379} alt="Image_COL-3 First_image" />
+                <img src={gallery_9} width={379} alt="Image_COl_3 Last_image" />
             </div>
             <div className="image-col col_4">
                 <img src={gallery_last} width={350} alt="Image_COl_4 Last_image" />
-                <img src={gallery_9} width={350} alt="Image_COl_4 Last_image" />
+                <img src={gallery_16} width={350} alt="Image_COL-4 First_image" />
             </div>
         </div>
     </section>
